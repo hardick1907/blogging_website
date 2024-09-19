@@ -1,0 +1,28 @@
+@font-face {
+  font-family: urbanist;
+  src: url(/fonts/Urbanist-Italic-VariableFont_wght.ttf);
+  src:url(/fonts/Urbanist-VariableFont_wght.ttf)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  margin: 2rem;
+  position: relative;
+  padding-top: 10rem;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "urbanist";
+}
+
+div.line{
+  display: grid;
+  grid-template-columns: auto auto;
+
+}
