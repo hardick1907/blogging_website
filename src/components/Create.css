@@ -1,22 +1,50 @@
-input{
+.form-input{
     display: block;
     width: 100%;
     margin-bottom: 5px;
     padding: 5px 7px;
     border: 2px solid #ddd;
     border-radius: 5px;
-    background-color: #eee;
+    background-color: hsl(0, 0%, 93%);
     border-bottom: 1px solid #ccc; 
   }
   
-  button{
-    width: 100%;
-    display: block;
-    background-color: #555;
-    border: 0;
-    color: white;
-    padding: 7px 0px;
-    border-radius: 5px;
-    cursor: pointer;
-  
-  }
+  .post-done {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Horizontally center the button */
+    align-items: center; /* Vertically center the button (if needed) */
+}
+
+.post-done button {
+    background-color: #4CAF50; /* Green background for posting */
+    color: white; /* White text */
+    padding: 10px 40px; /* Increase padding to make it wider */
+    width: 200px; /* Set a fixed width to make it wider */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Slightly larger font for emphasis */
+    font-weight: bold; /* Bold text for readability */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    outline: none; /* Remove default outline */
+}
+
+.post-done button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.post-done button:focus {
+    outline: 2px solid #007bff; /* Blue outline on focus for accessibility */
+}
+
+.post-done button:active {
+    transform: scale(0.98); /* Slightly shrink on click */
+}
+
+.post-done button:disabled {
+    background-color: #d0d0d0; /* Gray background when disabled */
+    cursor: not-allowed; /* No pointer when disabled */
+    box-shadow: none; /* Remove shadow when disabled */
+}
