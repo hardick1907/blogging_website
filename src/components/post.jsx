@@ -1,15 +1,23 @@
- import './post.css'
-export  default function Post() {
+ import { Link } from 'react-router-dom';
+import './post.css'
+ import { format } from "date-fns";
+export  default function Post({_id,title,summary,cover,content,createdAt}) {
     return (
         <div className="post">
-            <div className="image"><img src="https://i.pinimg.com/564x/2b/6c/2a/2b6c2af0b759e1277d29b1be0807c4e3.jpg" alt="" /></div>
+            <Link to={`/post/${_id}`}>
+                <div className="image"><img src={'http://localhost:3000/'+cover} alt="" /></div>
+            </Link>
+            
             <div className="texts">
-                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                <Link to={`/post/${_id}`}className='title'>
+                    <h2>{title}</h2>
+                </Link>
+               
                 <p className="info">
-                    <a href='#' className='author'>Hardick Bhadauria</a>
-                    <time>20-09-2024 01:48</time>
+                    {/*<a href='#' className='author'>Hardick Bhadauria</a>*/}
+                    <time>{format(new Date(createdAt),'MMM d, yyyy | HH:mm')}</time>
                 </p>
-                <p className='summary'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry standard dummy text ever since the 1500s</p>
+                <p className='summary'>{summary}</p>
             </div>
             
 

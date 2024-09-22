@@ -1,7 +1,9 @@
 
+import { useEffect } from 'react'
 import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import Underline from '@tiptap/extension-underline'
+
 
 import './TipTap.css'
 
@@ -11,7 +13,7 @@ const extensions = [
 ]
 const content =    ``;
 
-const TipTap = () => {
+const TipTap = ({onContentChange}) => {
   const editor = useEditor({
     extensions,
     content,
@@ -20,6 +22,23 @@ const TipTap = () => {
   if (!editor) {
     return null;
   }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    if (editor) {
+      const updateContent = () => {
+        const html = editor.getHTML();
+        onContentChange(html);
+      };
+
+      editor.on('update', updateContent);
+
+      return () => {
+        editor.off('update', updateContent);
+      };
+    }
+  }, [editor, onContentChange]);
+  
   return (
     <div className="control-group">
       <div className="button-group">

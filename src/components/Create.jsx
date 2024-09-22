@@ -8,6 +8,10 @@ export function Create (){
     const [content,setContent] = useState('');
     const [files,setFiles] = useState('');
 
+    const handleContentChange = (html) => {
+      setContent(html);
+    };
+
     async function createNewPost(ev){
 
         const data = new FormData();
@@ -37,9 +41,7 @@ export function Create (){
             onChange={ev => setSummary(ev.target.value)} />
             <input type="file"
             onChange={ev => setFiles(ev.target.files)}/>
-            <TipTap 
-            value={content}
-            onChange={ev => setContent(ev.target.value)}/>
+            <TipTap onContentChange={handleContentChange} />
             <div  className='post-done'><button>Post</button></div>
             
         </form>
