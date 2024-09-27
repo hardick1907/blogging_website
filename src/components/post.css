@@ -19,6 +19,8 @@ div.post{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 700px; /* Set a fixed height */
   overflow: hidden; /* Hide any overflow content */
+  background-color: rgb(255, 255, 255);
+  opacity: 100%;
 
   &:hover {
     transform: translateY(-5px);
@@ -58,4 +60,8 @@ div.post p.summary{
 
 .title{
   text-decoration: none;
+}
+
+.home-page-time{
+  margin: 1.7px 0;
 }

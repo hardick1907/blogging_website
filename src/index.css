@@ -1,70 +1,29 @@
-/* // Banners */
-
-.hero-section {
-  height: 60vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
 }
 
-.hero-section .container {
-  background-color: #fff;
-  padding: 3.2rem;
+/* Body styling */
+body {
+  margin: 0;
+  padding: 0;
+  /* Set the background image */
+  background-image: url('/images/wave.jpg'); /* Ensure this path is correct */
+  background-size: cover; /* Makes sure the image covers the entire background */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the image */
+  min-height: 100vh; /* Ensures the body covers the full viewport height */
+  position: relative; /* Establishes a positioning context for the watermark */
+  font-family: Arial, sans-serif; /* Optional: Set a default font */
 }
 
-.banner-column {
-  display: flex;
-  /* flex-direction: column; */
-  justify-content: space-between;
-  align-items: center;
-  gap: 6.4rem;
-}
 
-&-image {
-  display: block;
-  max-width: 20rem;
-  height: auto;
-  object-fit: cover;
-  justify-self: center;
-}
-
-&-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 1.5rem;
-}
-
-.paragraph {
-  margin: 3.2rem 0;
-}
-
-.heading-xl {
-  font-family: inherit;
-  font-size: clamp(2.648rem, 6vw, 4.241rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -1px;
-}
-
-.banner-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container .banner-image {
+/* Example styles for form inputs */
+.form-input {
   width: 100%;
-}
-
-@media screen and (max-width: 990px) {
-  .banner-column {
-    flex-direction: column;
-  }
-
-  .banner-inner {
-    order: 1;
-  }
-
-  .container .banner-image {
-    width: 80%;
-    order: 0;
-  }
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

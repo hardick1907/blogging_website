@@ -29,7 +29,7 @@
 }
 
 .post-page-title {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
@@ -65,6 +65,22 @@
 .post-page-content h3 {
     font-size: 1.5rem;
     margin-top: 20px;
+}
+
+time{
+    text-align: center;
+    display: block;
+    font-size: 1.3rem;
+    margin-top:-17px ;
+    color: #aaa;
+}
+
+.post-author{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    margin: 11px;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {

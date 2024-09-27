@@ -19,7 +19,7 @@ li{
   
   .navbar-grid{
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
     align-items: center;
     height: 10rem;
     padding: 0 3.2rem;
@@ -92,4 +92,24 @@ li{
     right: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+  }
+
+  .logo{
+      height: 150px;
+      width: 150px;
+      margin: -30px -30px;
+  }
+  
+  .logout{
+    font-size: 1.7rem;
+    display: grid;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+  
+    &:hover{
+      color: #2e86e1;
+      text-decoration: underline;
+    }
+    cursor: default;
   }

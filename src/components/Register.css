@@ -1,0 +1,94 @@
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative; /* Needed for positioning toggle button */
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-input.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  background-color: #bac3fe;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #92a1ff;
+  transform: scale(1.01);
+}
+
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 15px; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007BFF; 
+  font-size: 14px; 
+  outline: none; 
+}
+
+.toggle-password:hover {
+  background: none;
+}
+
+.gotologin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  font-size: 14px;
+  margin-top: 2rem;
+}
+
+.login-page-link{
+  text-decoration: none;
+  color: #007bff;
+  &:hover{
+    color: blue;
+    text-decoration: underline;
+  }
+}
